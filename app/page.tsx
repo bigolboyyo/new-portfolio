@@ -18,8 +18,6 @@ export default function Home() {
           className="rounded-4xl border-4 border-pink-400 shadow-[6px_6px_0_#8e7cc3] bg-zinc-950 p-1"
           priority
         />
-        {/* Testing auto-deploy of non MAIN git branches */}
-        {/* TEST #2 for verification!!! :) */}
         <HyperText className="text-4xl sm:text-5xl font-extralight tracking-tight text-white">
           Wesley Grant
         </HyperText>

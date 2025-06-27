@@ -4,32 +4,39 @@ import { TextAnimate } from "@/components/magicui/text-animate";
 import { useEffect, useState, useRef } from "react";
 
 const TITLES = [
-  "Web Developer",
-  "Data Technician",
-  "Creative Technologist",
-  "Linux Lunatic",
-  "Infrastructure Gremlin",
+  "Full-Stack Developer",
+  "API Architect",
+  "Homelab Hero",
+  "System Tinkerer",
+  "Chromebook Liberator",
+  "Renaissance Faire Enjoyer",
 ];
 
 export default function TextAnimateCycle() {
   const [index, setIndex] = useState(0);
-  const debounceTimeout = useRef<NodeJS.Timeout | null>(null);
+  const [cycleCount, setCycleCount] = useState(0);
+  // Sort of a planned debounce mechanism to cycle through titles
+  const cycleTimeout = useRef<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
-    if (debounceTimeout.current) clearTimeout(debounceTimeout.current);
+    if (cycleTimeout.current) clearTimeout(cycleTimeout.current);
 
-    debounceTimeout.current = setTimeout(() => {
-      setIndex((prev) => (prev + 1) % TITLES.length);
+    cycleTimeout.current = setTimeout(() => {
+      setIndex((prev) => {
+        const newIndex = (prev + 1) % TITLES.length;
+        if (newIndex === 0) setCycleCount((c) => c + 1);
+        return newIndex;
+      });
     }, 2000);
 
     return () => {
-      if (debounceTimeout.current) clearTimeout(debounceTimeout.current);
+      if (cycleTimeout.current) clearTimeout(cycleTimeout.current);
     };
   }, [index]);
 
   return (
     <TextAnimate
-      key={index}
+      key={`${index}-${cycleCount}`}
       className="
       text-[clamp(1.1rem,2.5vw,1.35rem)]
       whitespace-nowrap
