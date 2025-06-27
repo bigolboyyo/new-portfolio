@@ -15,7 +15,7 @@ export default function Home() {
           alt="Portrait"
           width={150}
           height={150}
-          className="rounded-full  shadow-md"
+          className="rounded-4xl border-4 border-pink-400 shadow-[6px_6px_0_#8e7cc3] bg-zinc-950 p-1"
           priority
         />
         {/* Testing auto-deploy of non MAIN git branches */}

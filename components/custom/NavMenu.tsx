@@ -15,11 +15,11 @@ function NavMenu() {
       <NavigationMenu
         viewport={true}
         className="
-    border-4 border-pink-300
+    border-2 border-pink-300
     bg-zinc-900 text-pink-400
     font-mono
-    shadow-[0_0_6px_#d16ba5,4px_4px_0_0_#8e7cc3]
-    outline-cyan-300 outline-2 outline-offset-[-6px]
+    shadow-[0_0_4px_#d16ba5,2px_2px_0_0_#8e7cc3]
+    outline-cyan-300 outline-2 outline-offset-[-4px] rounded-2xl pl-2
   "
       >
         <NavigationMenuList className="flex space-x-4 ">
@@ -51,6 +51,14 @@ function NavMenu() {
 
             <NavigationMenuContent className="font-bold bg-zinc-900 text-pink-400 shadow-[0_0_6px_#d16ba5,4px_4px_0_0_#8e7cc3] outline-cyan-300 outline-2 outline-offset-[-6px]">
               <div className="grid gap-3 p-4 w-60">
+                <NavigationMenuLink asChild>
+                  <Link
+                    href="/projects"
+                    className="block px-2 py-1 rounded hover:bg-gray-700 uppercase text-xs tracking-widest border-b border-gray-700 mb-2"
+                  >
+                    All Projects
+                  </Link>
+                </NavigationMenuLink>
                 {projects.map(({ title, slug }) => (
                   <NavigationMenuLink key={slug} asChild>
                     <Link

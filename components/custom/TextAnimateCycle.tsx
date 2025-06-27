@@ -30,7 +30,19 @@ export default function TextAnimateCycle() {
   return (
     <TextAnimate
       key={index}
-      className="text-[clamp(1.1rem,2.5vw,1.35rem)] whitespace-nowrap text-neon-outline z-100"
+      className="
+      text-[clamp(1.1rem,2.5vw,1.35rem)]
+      whitespace-nowrap
+      font-semibold
+      text-pink-400
+      z-100
+      [text-shadow:
+        0 0 2px rgba(209,107,165,0.7),
+        0 0 5px rgba(209,107,165,0.5),
+        0 0 8px rgba(209,107,165,0.3),
+        1px 1px 0 rgba(0,0,0,0.5)
+      ]
+    "
     >
       {TITLES[index]}
     </TextAnimate>
