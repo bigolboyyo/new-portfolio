@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist_Mono } from "next/font/google";
 import "./globals.css";
 import EnableSmoothCursor from "@/components/custom/EnableSmoothCursor";
+import NavMenu from "@/components/custom/NavMenu";
 
 export const metadata: Metadata = {
   title: "Wesley Grant",
@@ -34,6 +35,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark cursor-none">
       <body className={` ${geistMono.variable} antialiased `}>
+        <NavMenu />
         {children}
         <EnableSmoothCursor />
       </body>
