@@ -19,6 +19,7 @@ export default function Home() {
           priority
         />
         {/* Testing auto-deploy of non MAIN git branches */}
+        {/* TEST #2 for verification!!! :) */}
         <HyperText className="text-4xl sm:text-5xl font-extralight tracking-tight text-white">
           Wesley Grant
         </HyperText>
