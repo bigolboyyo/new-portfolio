@@ -177,3 +177,12 @@
     @apply bg-background text-foreground;
   }
 }
+
+@layer utilities {
+  .nav-trigger-transparent {
+    @apply bg-transparent hover:bg-transparent focus:bg-transparent;
+    @apply data-[state=open]:bg-transparent data-[state=open]:hover:bg-transparent data-[state=open]:focus:bg-transparent;
+    @apply data-[active=true]:bg-transparent data-[active=true]:hover:bg-transparent data-[active=true]:focus:bg-transparent;
+    @apply data-[active=false]:bg-transparent data-[active=false]:hover:bg-transparent data-[active=false]:focus:bg-transparent;
+  }
+}

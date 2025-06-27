@@ -11,34 +11,51 @@ import Link from "next/link";
 
 function NavMenu() {
   return (
-    <div className="w-full flex justify-between items-center px-4 pt-4">
-      <NavigationMenu viewport={true}>
-        <NavigationMenuList className="flex space-x-4">
+    <div className="w-full flex justify-between items-center px-4 pt-4 font-mono">
+      <NavigationMenu
+        viewport={true}
+        className="
+    border-4 border-pink-300
+    bg-zinc-900 text-pink-400
+    font-mono
+    shadow-[0_0_6px_#d16ba5,4px_4px_0_0_#8e7cc3]
+    outline-cyan-300 outline-2 outline-offset-[-6px]
+  "
+      >
+        <NavigationMenuList className="flex space-x-4 ">
           {/* Home Nav */}
           <NavigationMenuItem>
-            <NavigationMenuLink asChild>
+            <NavigationMenuLink
+              asChild
+              className="bg-transparent hover:bg-transparent focus:bg-transparent"
+            >
               <Link href="/">Home</Link>
             </NavigationMenuLink>
           </NavigationMenuItem>
 
           {/* Gallery Nav */}
           <NavigationMenuItem>
-            <NavigationMenuLink asChild>
+            <NavigationMenuLink
+              asChild
+              className="bg-transparent hover:bg-transparent focus:bg-transparent"
+            >
               <Link href="/gallery">Gallery</Link>
             </NavigationMenuLink>
           </NavigationMenuItem>
 
           {/* Projects Nav */}
           <NavigationMenuItem>
-            <NavigationMenuTrigger>Projects</NavigationMenuTrigger>
+            <NavigationMenuTrigger className="nav-trigger-transparent">
+              Projects
+            </NavigationMenuTrigger>
 
-            <NavigationMenuContent>
+            <NavigationMenuContent className="font-bold bg-zinc-900 text-pink-400 shadow-[0_0_6px_#d16ba5,4px_4px_0_0_#8e7cc3] outline-cyan-300 outline-2 outline-offset-[-6px]">
               <div className="grid gap-3 p-4 w-60">
                 {projects.map(({ title, slug }) => (
                   <NavigationMenuLink key={slug} asChild>
                     <Link
                       href={`/projects/${slug}`}
-                      className="block px-2 py-1 rounded hover:bg-gray-700"
+                      className="block px-2 py-1 rounded hover:bg-gray-700 "
                     >
                       {title}
                     </Link>
