@@ -38,11 +38,12 @@ export default function TextAnimateCycle() {
     <TextAnimate
       key={`${index}-${cycleCount}`}
       className="
+    
       text-[clamp(1.1rem,2.5vw,1.35rem)]
       whitespace-nowrap
       font-semibold
       text-pink-400
-      z-100
+      z-99
       [text-shadow:
         0 0 2px rgba(209,107,165,0.7),
         0 0 5px rgba(209,107,165,0.5),

@@ -3,6 +3,7 @@ import { Geist_Mono } from "next/font/google";
 import "./globals.css";
 import EnableSmoothCursor from "@/components/custom/EnableSmoothCursor";
 import NavMenu from "@/components/custom/NavMenu";
+import ClientDebugger from "@/app/library/clientDebugger";
 
 export const metadata: Metadata = {
   title: "Wesley Grant",
@@ -33,8 +34,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark cursor-none">
-      <body className={` ${geistMono.variable} antialiased `}>
+    <html lang="en" className="dark cursor-none ">
+      <body className={` ${geistMono.variable} antialiased h-full`}>
+        <ClientDebugger />
         <NavMenu />
         {children}
         <EnableSmoothCursor />

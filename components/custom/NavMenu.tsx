@@ -1,4 +1,4 @@
-import { projects } from "@/app/const/projects";
+import { projects } from "@/app/library/projects";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -8,10 +8,13 @@ import {
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
 import Link from "next/link";
+import { MdOutlineSettings } from "react-icons/md";
+import RotatingIcon from "./RotatingIcon";
+import { DrawerDialogDemo } from "./DrawerDialog";
 
 function NavMenu() {
   return (
-    <div className="w-full flex justify-between items-center px-4 pt-4 font-mono">
+    <div className="w-full flex justify-between items-center px-4 pt-4 font-mono mb-16 ">
       <NavigationMenu
         viewport={true}
         className="
@@ -75,7 +78,8 @@ function NavMenu() {
         </NavigationMenuList>
       </NavigationMenu>
 
-      <p className="text-sm whitespace-nowrap hidden sm:inline">Test</p>
+      {/* <RotatingIcon /> */}
+      <DrawerDialogDemo />
     </div>
   );
 }
