@@ -1,18 +1,27 @@
+"use client"
+
 import { Loader, Mail, MessageCircle, User, Waves } from "lucide-react"
 import { DynamicContainer, DynamicDescription, DynamicDiv, DynamicTitle } from "../ui/dynamic-island"
 import { Button } from "../ui/button"
+import ConfettiOnMount from "./ConfettiOnMount"
+import Image from "next/image"
+import RetroSpinner from "./RetroSpinner"
+import { TypingAnimation } from "../magicui/typing-animation"
+
 
 const renderCompactState = () => (
     <DynamicContainer className="flex items-center justify-center h-full w-full">
         <div className="relative w-full flex items-center">
+            <ConfettiOnMount />
             <DynamicDescription className="absolute left-4  my-auto text-lg font-medium tracking-tighter text-white ">
-                <MessageCircle className=" h-5 w-5 fill-cyan-400 text-cyan-400" />
+                <Image alt="alt-img" src={"/favicon.ico"} width={35} height={35} className="border-rounded" />
             </DynamicDescription>
 
             <DynamicDescription className="absolute text-white right-4  my-auto text-lg font-bold tracking-tighter ">
-                newcult.co
+                wesgrant.dev
             </DynamicDescription>
         </div>
+
     </DynamicContainer>
 )
 
@@ -20,10 +29,10 @@ const renderCompactState = () => (
 const renderLargeState = () => (
     <DynamicContainer className="flex items-center justify-center h-full w-full">
         <div className="relative  flex w-full items-center justify-between gap-6 px-4">
-            <Loader className="animate-spin h-12 w-12  text-yellow-300" />
-
+            {/* <Loader className="animate-spin h-12 w-12  text-yellow-300" /> */}
+            <RetroSpinner size={32} color="#00FFCC" />
             <DynamicTitle className="my-auto text-2xl font-black tracking-tighter text-white ">
-                loading
+                <TypingAnimation delay={50} >loading</TypingAnimation>
             </DynamicTitle>
         </div>
     </DynamicContainer>
@@ -61,15 +70,15 @@ const renderLongState = () => (
 )
 
 const renderMediumState = () => (
-    <DynamicContainer className="flex flex-col justify-between px-2 pt-4 text-left text-white h-full">
+    <DynamicContainer className="flex flex-col justify-between px-2 pt-4 text-left text-white h-full h-fit">
         <DynamicTitle className="text-2xl pl-3 font-black tracking-tighter">
             Reincarnation, welcome back
         </DynamicTitle>
-        <DynamicDescription className="leading-5 text-neutral-500 pl-3">
+        <DynamicDescription className="leading- text-neutral-500 pl-3">
             Good for small tasks or call outs
         </DynamicDescription>
 
-        <DynamicDiv className="flex flex-col mt-auto space-y-1 mb-2 bg-neutral-700 p-2 rounded-b-2xl">
+        <DynamicDiv className="flex flex-col mt-auto space-y-1 mb-2 bg-neutral-700 p-2 rounded-b-2xl scale-95">
             <Button>
                 <Mail className="mr-2 h-4 w-4 fill-cyan-400 text-neutral-900" /> Login
                 with email

@@ -1,8 +1,5 @@
 "use client"
 
-import {
-    ArrowUpLeftSquareIcon
-} from "lucide-react"
 import { motion, useReducedMotion } from "motion/react"
 import React, { createContext, useContext, useEffect, useState } from "react"
 
@@ -15,6 +12,7 @@ import {
     useDynamicIslandSize
 } from "@/components/ui/dynamic-island"
 
+import Image from "next/image"
 import { renderCompactState, renderLargeState, renderLongState, renderMediumState, renderTallState } from "./CultBlobRenders"
 
 const DynamicAction = () => {
@@ -28,12 +26,14 @@ const DynamicAction = () => {
 
     function startAnimationSequence() {
         const steps = [
-            { size: "compact", delay: 0 },
-            { size: "large", delay: 1000 },
-            { size: "tall", delay: 2000 },
-            { size: "long", delay: 3000 },
-            { size: "medium", delay: 4000 },
+            { size: "compact", delay: 600 },
+            { size: "large", delay: 1600 },
+            { size: "tall", delay: 2600 },
+            { size: "long", delay: 3600 },
+            { size: "medium", delay: 4600 },
         ]
+
+        // const steps: any[] = []
 
         steps.forEach(({ size, delay }) => {
             setTimeout(() => {
@@ -61,11 +61,14 @@ const DynamicAction = () => {
 
     // This is the default state when no specific size is set and also the first quick render
     const renderOtherStates = () => (
-        <div className="flex items-center justify-center h-full w-full">
-            <div>
-                <ArrowUpLeftSquareIcon className="text-white" />
-            </div>
-            <p className="text-white">cycle states</p>
+        <div className="flex ml-4">
+            <Image
+                src="/squib_face_sticker_clean.png"
+                alt="vapor"
+                width={50}
+                height={50}
+                className="rounded-full" />
+            <p className="text-white self-center mb-2 ml-2">Hi</p>
         </div>
     )
 
@@ -105,9 +108,9 @@ const DynamicAction = () => {
     };
 
     return (
-        <div className=" h-full">
+        <div className=" h-full max-w-[90vw] ">
             <div className="flex flex-col gap-4  h-full">
-                <div className="absolute top-12 left-1">
+                <div className="absolute top-12 left-1 ">
                     {/* {!blobState.isAnimating ? ( */}
                     {/* isANimating default button. shows logic for auto cycling if setStarted(true) */}
                     {/* <Button
@@ -120,7 +123,7 @@ const DynamicAction = () => {
           </Button> */}
                     {/* ) : null} */}
                 </div>
-                <div className="absolute top-1 right-2">
+                <div className="absolute top-1 right-2 ">
                     <div>
                         {/* Badge was originally here */}
                         {/* <p>{blobState.previousSize}</p>
@@ -131,7 +134,7 @@ const DynamicAction = () => {
                 <StartButton setStarted={setStarted} started={started} />
                 {/* {started ? <DynamicIsland id="dynamic-blob">{started ? renderState() : null}</DynamicIsland> : null} */}
                 {started && (
-                    <DynamicIsland id="dynamic-blob">
+                    <DynamicIsland id="dynamic-blob" >
                         {renderState()}
                     </DynamicIsland>
                 )}
