@@ -1,7 +1,5 @@
 "use client";
 
-import * as React from "react";
-import { cn } from "@/lib/utils";
 import {
   Dialog,
   DialogContent,
@@ -17,6 +15,8 @@ import {
   DrawerTrigger,
 } from "@/components/ui/drawer";
 import useMediaQuery from "@/lib/hooks/useMediaQuery";
+import { cn } from "@/lib/utils";
+import * as React from "react";
 import { MdOutlineSettings } from "react-icons/md";
 
 function RotatingIcon({ isOpen }: { isOpen: boolean }) {
@@ -36,7 +36,7 @@ export function DrawerDialogDemo() {
 
   const content = (
     <div className="text-white text-sm leading-relaxed">
-      <p>This is where you'd drop info or settings content.</p>
+      <p>This is where you&apos;d drop info or settings content.</p>
       <p className="mt-2">Minimal UI, clean presentation.</p>
     </div>
   );

@@ -1,13 +1,26 @@
 "use client"
 
-import { Loader, Mail, MessageCircle, User, Waves } from "lucide-react"
-import { DynamicContainer, DynamicDescription, DynamicDiv, DynamicTitle } from "../ui/dynamic-island"
-import { Button } from "../ui/button"
-import ConfettiOnMount from "./ConfettiOnMount"
+import { Mail, User, Waves } from "lucide-react"
 import Image from "next/image"
-import RetroSpinner from "./RetroSpinner"
 import { TypingAnimation } from "../magicui/typing-animation"
+import { Button } from "../ui/button"
+import { DynamicContainer, DynamicDescription, DynamicDiv, DynamicTitle } from "../ui/dynamic-island"
+import ConfettiOnMount from "./ConfettiOnMount"
+import RetroSpinner from "./RetroSpinner"
 
+
+// This is the default state when no specific size is set and also the first quick render
+const renderOtherStates = () => (
+    <div className="flex ml-4">
+        <Image
+            src="/squib_face_sticker_clean.png"
+            alt="vapor"
+            width={50}
+            height={50}
+            className="rounded-full" />
+        <p className="text-white self-center mb-2 ml-2">Hi</p>
+    </div>
+)
 
 const renderCompactState = () => (
     <DynamicContainer className="flex items-center justify-center h-full w-full">
@@ -92,4 +105,4 @@ const renderMediumState = () => (
     </DynamicContainer>
 )
 
-export { renderCompactState, renderLargeState, renderTallState, renderLongState, renderMediumState }
+export { renderOtherStates, renderCompactState, renderLargeState, renderLongState, renderMediumState, renderTallState }
