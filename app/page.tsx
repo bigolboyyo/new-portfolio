@@ -5,7 +5,6 @@ import RotatingHeadshot from "@/components/custom/RotatingHeadshot";
 import TextAnimateCycle from "@/components/custom/TextAnimateCycle";
 import { HyperText } from "@/components/magicui/hyper-text";
 import { RetroGrid } from "@/components/magicui/retro-grid";
-import Image from "next/image";
 
 export default function Home() {
   return (
