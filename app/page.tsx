@@ -25,7 +25,7 @@ export default function Home() {
           opacity={1}
           lightLineColor="#d1bfff"
           darkLineColor="#432d7f"
-          className="absolute inset-0"
+          className="absolute inset-0 hidden md:block"
         />
       </main>
     </div>
