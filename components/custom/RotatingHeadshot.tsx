@@ -14,12 +14,6 @@ export default function RotatingHeadshot() {
     const [isVisible, setIsVisible] = useState(true);
 
     useEffect(() => {
-        const preloadedImages = IMAGES.map((src) => {
-            const img = new window.Image();
-            img.src = src;
-            return img;
-        });
-
         let fadeTimeout: ReturnType<typeof setTimeout> | null = null;
 
         const interval = setInterval(() => {
@@ -34,28 +28,20 @@ export default function RotatingHeadshot() {
         return () => {
             clearInterval(interval);
             if (fadeTimeout) clearTimeout(fadeTimeout);
-            preloadedImages.forEach((img) => {
-                img.src = "";
-            });
         };
     }, []);
 
     return (
-        <div className="relative w-[200px] h-[300px] rounded-full overflow-hidden shadow-md">
+        <div className="relative w-[200px] h-[200px] rounded-full overflow-hidden shadow-md">
             <Image
                 src={IMAGES[currentImageIndex]}
                 alt="Portrait"
                 fill
                 sizes="200px"
-                unoptimized
+                quality={60}
                 className={`object-cover object-center transition-opacity duration-700 ease-in-out ${isVisible ? "opacity-100" : "opacity-0"}`}
                 priority
             />
-            <div className="pointer-events-none absolute inset-0 opacity-0">
-                {IMAGES.map((src) => (
-                    <img key={src} src={src} alt="" width={1} height={1} />
-                ))}
-            </div>
         </div>
     );
 }

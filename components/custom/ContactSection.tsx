@@ -1,7 +1,6 @@
 "use client";
 
-import { FaGithub, FaTwitch } from "react-icons/fa";
-import { HiOutlineMail } from "react-icons/hi";
+import { Github, Mail, Twitch } from "lucide-react";
 
 export default function ContactSection() {
   return (
@@ -21,7 +20,7 @@ export default function ContactSection() {
           rel="noopener noreferrer"
           className="hover:text-[#ff2975] transition-colors"
         >
-          <FaGithub />
+          <Github />
         </a>
 
         <a
@@ -31,7 +30,7 @@ export default function ContactSection() {
           rel="noopener noreferrer"
           className="hover:text-[#9146FF] transition-colors"
         >
-          <FaTwitch />
+          <Twitch />
         </a>
 
         <a
@@ -39,7 +38,7 @@ export default function ContactSection() {
           aria-label="Email"
           className="hover:text-[#00FFF1] transition-colors"
         >
-          <HiOutlineMail />
+          <Mail />
         </a>
       </div>
       <code className="text-sm text-white/70 select-all cursor-text">

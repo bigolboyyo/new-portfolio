@@ -1,7 +1,12 @@
 "use client";
 
+import dynamic from "next/dynamic";
 import { useEffect, useState } from "react";
-import { SmoothCursor } from "../ui/smooth-cursor";
+
+const DynamicSmoothCursor = dynamic(
+  () => import("../ui/smooth-cursor").then((mod) => mod.SmoothCursor),
+  { ssr: false }
+);
 
 export default function EnableSmoothCursor() {
   const [showCursor, setShowCursor] = useState(false);
@@ -26,5 +31,5 @@ export default function EnableSmoothCursor() {
     };
   }, []);
 
-  return showCursor ? <SmoothCursor /> : null;
+  return showCursor ? <DynamicSmoothCursor /> : null;
 }
