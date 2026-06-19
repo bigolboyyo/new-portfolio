@@ -42,7 +42,7 @@ export default function ContactSection() {
         </a>
       </div>
       <code className="text-sm text-white/70 select-all cursor-text">
-        wesg.dev@proton.me
+        contact@wesgrant.dev
       </code>
       <div className="mt-4">
         <a
