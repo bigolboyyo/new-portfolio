@@ -1,68 +1,82 @@
 import { Marquee } from "@/components/magicui/marquee";
 
 const skills = [
+  // 🌐 Core Web + App Dev
   "JavaScript",
   "TypeScript",
-  "Node.js",
   "React",
   "Next.js",
-  "Express",
-  "Hono",
+  "Node.js",
   "Tailwind CSS",
   "HTML5",
   "CSS3",
-  "Tampermonkey",
-  "Python",
-  "Flask",
-  "OBS Scripting",
-  "Custom HTML Overlays",
-  "Game Emulation",
-  "Media Preservation",
-  "Linux",
-  "WSL",
-  "Bash",
-  "Data Wrangling",
-  "Systems Design",
-  "Creative Coding",
-  "Vaporwave Aesthetic",
-  "Crafting",
-  "Leatherwork",
-  "Raspberry Pi",
-  "LoRa",
-  "Git",
-  "Docker",
-  "GitHub Actions",
-  "CI/CD",
+
+  // ⚙️ Backend / Systems
   "REST APIs",
   "WebSockets",
-  "GraphQL",
+  "Express",
+  "Hono",
   "SQLite",
   "PostgreSQL",
   "Redis",
   "Nginx",
+
+  // 🧱 DevOps / Infra
+  "Linux",
+  "Bash",
+  "Docker",
+  "Git",
+  "GitHub Actions",
+  "CI/CD",
   "Systemd",
-  "Network Protocols",
-  "TCP/IP",
-  "UDP",
-  "Arduino",
-  "ESP32",
+
+  // 🎮 Game Dev + Creative Engineering
+  "Godot Engine",
+  "GDScript",
+  "Creative Coding",
+  "Game Systems Design",
+  "Pixel Art Pipelines",
+  "Animation Systems",
+  "Real-time UI Systems",
+
+  // 🧪 Scripting / Automation
+  "Python",
+  "Data Wrangling",
+  "Automation Scripting",
+  "Tampermonkey Scripts",
+  "OBS Scripting",
+  "Custom Streaming Overlays",
+
+  // 🔌 Hardware / Embedded
+  "Raspberry Pi Projects",
+  "Meshtastic",
+  "LoRa / Low-Power Networking",
+
+  // 🌐 Networking / Systems Thinking
+  "TCP/IP Fundamentals",
+  "UDP Systems",
+  "Network Protocol Awareness",
+  "Offline-First Design",
+
+  // 🧠 Engineering Practices
+  "Debugging",
+  "Performance Optimization",
+  "Profiling",
+  "Systems Design",
+  "Security Awareness",
+
+  // 🎨 UI / UX / Creative Direction
+  "UI/UX Principles",
+  "Motion Design (Framer Motion)",
+  "Interactive Web Animation",
+
+  // 🧰 Data / Formats / Glue
   "JSON",
   "YAML",
   "Markdown",
-  "SEO",
-  "UX/UI Principles",
-  "Open Source Contribution",
-  "Agile Methodologies",
-  "Debugging",
-  "Profiling",
-  "Performance Optimization",
-  "Security Best Practices",
-  "OAuth",
-  "JWT",
-  "FOSS Advocacy",
-  "Decentralized Systems",
-  "Mesh Networking",
-  "Offline-First Design",
+
+  // 🌍 Philosophy / Open Source Angle
+  "FOSS Advocacy"
 ];
 
 function SkillBadge({ skill }: { skill: string }) {

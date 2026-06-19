@@ -118,12 +118,8 @@
   --sidebar-ring: oklch(0.708 0 0);
 }
 
-.dark,
+/* .dark,
 [data-theme="dark"] {
-  /* --background: oklch(0.145 0 0); */
-  /* --card: oklch(0.205 0 0);
-  --card-foreground: oklch(0.985 0 0); */
-  /* Adjusted brightness for dark mode compensation */
   --foreground: oklch(0.985 0 0);
   --background: oklch(0.3 0 0);
   --card: oklch(0.35 0 0);
@@ -155,12 +151,76 @@
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.556 0 0);
+} */
+
+.dark,
+[data-theme="dark"] {
+  /* Base */
+  --background: oklch(0.16 0.01 255);
+  --foreground: oklch(0.96 0.01 255);
+
+  /* Surfaces */
+  /* --card: oklch(0.2 0.015 255);
+  --card-foreground: oklch(0.96 0.01 255); */
+
+  --card: oklch(0.2 0.015 255 / 0.85);
+  backdrop-filter: blur(10px);
+
+  --popover: oklch(0.18 0.01 255);
+  --popover-foreground: oklch(0.96 0.01 255);
+
+  /* Core UI */
+  --primary: oklch(0.78 0.12 250);
+  --primary-foreground: oklch(0.16 0.01 255);
+
+  --secondary: oklch(0.22 0.015 255);
+  --secondary-foreground: oklch(0.96 0.01 255);
+
+  --muted: oklch(0.22 0.01 255);
+  --muted-foreground: oklch(0.7 0.02 255);
+
+  --accent: oklch(0.78 0.12 250);
+  --accent-foreground: oklch(0.16 0.01 255);
+
+  /* Borders */
+  --border: oklch(1 0 0 / 8%);
+  --input: oklch(1 0 0 / 12%);
+  --ring: oklch(0.78 0.12 250);
+
+  /* Charts (optional but now coherent) */
+  --chart-1: oklch(0.7 0.18 250);
+  --chart-2: oklch(0.65 0.14 200);
+  --chart-3: oklch(0.72 0.16 300);
+  --chart-4: oklch(0.68 0.15 170);
+  --chart-5: oklch(0.75 0.14 60);
+
+  /* Sidebar */
+  --sidebar: oklch(0.18 0.01 255);
+  --sidebar-foreground: oklch(0.96 0.01 255);
+  --sidebar-primary: oklch(0.78 0.12 250);
+  --sidebar-primary-foreground: oklch(0.16 0.01 255);
+  --sidebar-accent: oklch(0.22 0.015 255);
+  --sidebar-accent-foreground: oklch(0.96 0.01 255);
+  --sidebar-border: oklch(1 0 0 / 8%);
+  --sidebar-ring: oklch(0.78 0.12 250);
 }
 
-.text-neon-outline {
+/* .text-neon-outline {
   color: #a100ff;
   font-weight: 700;
-  text-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 4px #a100ff, 0 0 8px #a100ff;
+  text-shadow:
+    0 0 1px #fff,
+    0 0 2px #fff,
+    0 0 4px #a100ff,
+    0 0 8px #a100ff;
+} */
+
+.text-neon-outline {
+  color: oklch(0.78 0.12 250);
+  font-weight: 600;
+  text-shadow:
+    0 0 6px oklch(0.78 0.12 250 / 0.6),
+    0 0 14px oklch(0.78 0.12 250 / 0.3);
 }
 
 @layer base {

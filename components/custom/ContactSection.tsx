@@ -10,8 +10,7 @@ export default function ContactSection() {
         Contact
       </h2>
       <p className="text-sm sm:text-base text-white/80 leading-relaxed">
-        Please feel free to reach out if you want to collaborate, chat, swap
-        nerdy ideas or hire me.
+        Feel free to reach out if you&apos;d like to collaborate, connect, exchange ideas or discuss opportunities.
       </p>
 
       <div className="flex justify-center gap-6 text-2xl text-white">

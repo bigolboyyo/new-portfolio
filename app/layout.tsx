@@ -1,5 +1,9 @@
 import type { Metadata } from "next";
 import { Geist_Mono } from "next/font/google";
+
+// TypeScript may complain about side-effect CSS imports when no global type
+// declarations are present. Silence that specific check here.
+// @ts-ignore: Implicitly importing CSS for side effects
 import "./globals.css";
 import EnableSmoothCursor from "@/components/custom/EnableSmoothCursor";
 

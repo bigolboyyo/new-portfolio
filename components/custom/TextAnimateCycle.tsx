@@ -4,11 +4,11 @@ import { TextAnimate } from "@/components/magicui/text-animate";
 import { useEffect, useState, useRef } from "react";
 
 const TITLES = [
-  "Web Developer",
-  "Data Technician",
-  "Creative Technologist",
-  "Linux Lunatic",
-  "Infrastructure Gremlin",
+  "Full-Stack Developer",
+  "Former AWS Data Technician",
+  "Indie Game Developer",
+  "Twitch Streamer",
+  "Open Source Enthusiast"
 ];
 
 export default function TextAnimateCycle() {
@@ -20,7 +20,7 @@ export default function TextAnimateCycle() {
 
     debounceTimeout.current = setTimeout(() => {
       setIndex((prev) => (prev + 1) % TITLES.length);
-    }, 2000);
+    }, 3000);
 
     return () => {
       if (debounceTimeout.current) clearTimeout(debounceTimeout.current);
