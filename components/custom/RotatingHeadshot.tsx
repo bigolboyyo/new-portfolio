@@ -47,9 +47,15 @@ export default function RotatingHeadshot() {
                 alt="Portrait"
                 fill
                 sizes="200px"
+                unoptimized
                 className={`object-cover object-center transition-opacity duration-700 ease-in-out ${isVisible ? "opacity-100" : "opacity-0"}`}
                 priority
             />
+            <div className="pointer-events-none absolute inset-0 opacity-0">
+                {IMAGES.map((src) => (
+                    <img key={src} src={src} alt="" width={1} height={1} />
+                ))}
+            </div>
         </div>
     );
 }
