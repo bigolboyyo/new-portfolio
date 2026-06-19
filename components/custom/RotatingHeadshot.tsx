@@ -32,13 +32,12 @@ export default function RotatingHeadshot() {
     }, []);
 
     return (
-        <div className="relative w-[200px] h-[200px] rounded-full overflow-hidden shadow-md">
+        <div className="relative w-[200px] h-[250px] overflow-hidden rounded-[32px] shadow-md">
             <Image
                 src={IMAGES[currentImageIndex]}
                 alt="Portrait"
                 fill
                 sizes="200px"
-                quality={60}
                 className={`object-cover object-center transition-opacity duration-700 ease-in-out ${isVisible ? "opacity-100" : "opacity-0"}`}
                 priority
             />
