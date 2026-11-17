@@ -6,9 +6,9 @@ import "./globals.css";
 import EnableSmoothCursor from "@/components/custom/EnableSmoothCursor";
 
 export const metadata: Metadata = {
-  title: "Wesley Grant",
+  title: "Wesley Grant — Developer",
   description:
-    "Full-stack developer, systems tinkerer, and retro tech enthusiast. Building elegant tools, bending protocols, and soldering hardware late into the night.",
+    "A personal page for Wesley Grant, developer, maker and curious tinkerer.",
   keywords: [
     "Full-stack Developer",
     "Systems Tinkerer",
@@ -34,7 +34,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark cursor-none">
+    <html lang="en" className="dark">
       <body className={` ${geistMono.variable} antialiased `}>
         {children}
         <EnableSmoothCursor />
